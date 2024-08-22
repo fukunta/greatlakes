@@ -1,0 +1,75 @@
+{
+  "name": "great-lakes",
+  "version": "1.4.3",
+  "description": "Great lakes transport and trade ltd",
+  "main": "build/main.js",
+  "scripts": {
+    "build": "electron-builder build",
+    "builder": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build --win --publish always",
+    "start": "electron build/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "appId": "com.greatlakes.app",
+    "productName": "Great Lakes App",
+    "directories": {
+      "buildResources": "build",
+      "output": "release"
+    },
+    "files": [
+      "build/**/*",
+      "package.json"
+    ],
+    "linux": {
+      "target": [
+        "deb",
+        "AppImage"
+      ],
+      "category": "Management",
+      "icon": "build/icon.png"
+    },
+    "win": {
+      "asar": true,
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "installerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico",
+      "deleteAppDataOnUninstall": true,
+      "oneClick": false,
+      "perMachine": true,
+      "allowElevation": true
+    },
+    "publish": {
+      "provider": "github"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ishimwepatrick/greatlakes-app.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Fine Africa Ltd",
+    "email": "info@fineafricaltd.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "electron-updater": "^4.6.1",
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "electron": "^16.0.5",
+    "electron-builder": "^22.14.5",
+    "electron-installer-windows": "^3.0.0"
+  }
+}

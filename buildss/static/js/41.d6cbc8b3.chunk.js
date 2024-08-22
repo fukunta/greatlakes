@@ -1,0 +1,2 @@
+(this.webpackJsonpGreatLakes=this.webpackJsonpGreatLakes||[]).push([[41],{581:function(s,e,a){"use strict";a.r(e);a(0);var t=a(3);e.default=function(s){var e=s.name,a=s.desc;return Object(t.jsxs)("div",{className:"mb-3",children:[Object(t.jsxs)("span",{className:"font-weight-bold text-dark",children:[e,":"]}),Object(t.jsxs)("span",{className:"text-gray-light",children:[" ",a]})]})}}}]);
+//# sourceMappingURL=41.d6cbc8b3.chunk.js.map
